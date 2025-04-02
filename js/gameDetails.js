@@ -12,11 +12,13 @@ fetch("	https://zelda.fanapis.com/api/games/" + gameID)
         console.log(result.data);
         let gameData = result.data;
         let detailsHTML = `
+                <img src="img/${gameID}.jpg">
                 <h2>${gameData.name}</h2>
                 <p>${gameData.description}</p>
                 <p>Fecha de lanzamiento: ${gameData.released_date}</p>
                 <p>Desarrollador: ${gameData.developer}</p>
                 <p>Publisher: ${gameData.publisher}</p>
+                
         `;
         gameDetailsCont.html(detailsHTML);
     })
